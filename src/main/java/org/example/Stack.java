@@ -12,7 +12,7 @@ peek
 isEmpty
 size
 */
-public class Main{
+public class Stack {
     static Scanner scanner = new Scanner(System.in);
     private static final ArrayList<String> stack = new ArrayList<>();
 
@@ -23,7 +23,13 @@ public class Main{
         isEmpty();
         push();
         push();
+        push();
+        push();
+        push();
+        push();
+        push();
         peek();
+        printStack();
         size();
         isEmpty();
     }
@@ -45,7 +51,7 @@ public class Main{
     }
 
     public static void peek() {
-        System.out.println("O último elemento é: " + stack.getLast());
+        System.out.println("O elemento do topo é: " + stack.getLast());
     }
 
     public static boolean isEmpty() {
@@ -56,5 +62,12 @@ public class Main{
     public static int size() {
         System.out.println("O tamanho da pilha é de " + stack.size());
         return stack.size();
+    }
+
+    public static void printStack() {
+        for (int i = stack.size() - 1; i >= 0; i--)
+        {
+            System.out.println(stack.get(i));
+        }
     }
 }
